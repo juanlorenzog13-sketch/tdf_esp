@@ -5,7 +5,7 @@ import pandas as pd
 import re
 from nltk.stem import SnowballStemmer
 
-st.title("🔍 Demo TF-IDF en Español")
+st.title("🔍 Bot de preguntas y respuestas")
 
 # Documentos de ejemplo
 default_docs = """El perro ladra fuerte en el parque.
@@ -33,7 +33,7 @@ def tokenize_and_stem(text):
 col1, col2 = st.columns([2, 1])
 
 with col1:
-    text_input = st.text_area("📝 Documentos (uno por línea):", default_docs, height=150)
+    text_input = st.text_area("📝 Cargue aqui los documentos (uno por línea):", default_docs, height=150)
     question = st.text_input("❓ Escribe tu pregunta:", "¿Dónde juegan el perro y el gato?")
 
 with col2:
